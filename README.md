@@ -1,6 +1,8 @@
 # Observability Stack for DevOps
 
-Metrics, logs, and traces — one `docker compose up` away.
+> **Project attribution:** This repository is a fork of [LondheShubham153/observability-for-devops](https://github.com/LondheShubham153/observability-for-devops). The published fork has no commits ahead of upstream. It is retained as a learning reference, not presented as an original implementation.
+
+A Docker Compose-based metrics and logs lab with an OpenTelemetry Collector that accepts OTLP input. This configuration does not provide a queryable traces backend.
 
 ![Docker + cAdvisor Stack](assets/docker.png)
 ![NodeExporter Stack](assets/nodeexporter.png)
@@ -18,12 +20,12 @@ Notes App   → demo workload
 ## Quick start
 
 ```bash
-git clone https://github.com/yourusername/Observability-For-DevOps.git
-cd Observability-For-DevOps
+git clone https://github.com/riyan-ahmed/observability-for-devops.git
+cd observability-for-devops
 docker compose up -d
 ```
 
-That's it. Open http://localhost:3000 (admin/admin).
+After the services start, open http://localhost:3000 for Grafana. Change any default or example credentials before exposing the stack beyond a local lab.
 
 ## Endpoints
 
